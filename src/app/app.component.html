@@ -1,1 +1,12 @@
 <h1>{{ 'HOME_PAGE.HELLO_WORLD' | translate }}</h1>
+
+<button mat-raised-button color="primary">Click me!</button>
+
+<mat-form-field appearance="fill">
+  <mat-label>Select language</mat-label>
+  <mat-select (valueChange)="changeLanguage($event)">
+    <mat-option *ngFor="let lang of languages" [value]="lang.value" >
+      {{lang.label | translate }}
+    </mat-option>
+  </mat-select>
+</mat-form-field>

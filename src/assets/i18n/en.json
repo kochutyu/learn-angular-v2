@@ -1,5 +1,9 @@
 {
   "HOME_PAGE": {
     "HELLO_WORLD": "Hello world!"
+  },
+  "LANGUAGES": {
+    "UA": "Ukrainian",
+    "EN": "English"
   }
 }
