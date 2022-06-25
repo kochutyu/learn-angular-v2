@@ -2,8 +2,20 @@
 // `ng build` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
+import {TranslateLoader} from "@ngx-translate/core";
+import {HttpClient} from "@angular/common/http";
+import {createTranslateLoader} from "../app/app.module";
+
 export const environment = {
-  production: false
+  production: false,
+  ngxTranslateConfig: {
+    defaultLanguage: 'ua',
+    loader: {
+      provide: TranslateLoader,
+      useFactory: createTranslateLoader,
+      deps: [HttpClient]
+    }
+  }
 };
 
 /*
